@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+    
+.custom-section {
+    text-align:center;
+    color:white;
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:32px;
+    padding-top:40vh;
+    height:100vh;
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.custom-section div {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.custom-section div:first-of-type {
+    animation: showup 7s infinite;
+}
+
+.custom-section div:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+}
+
+.custom-section div:last-of-type span {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+.custom-section p {
+    font-size:12px;
+    color:#999;
+    margin-top:200px;
+}
+
+
+</style>
+<title>Scrolling Text Animation</title>
+</head>
+<body>
+
+<div class="custom-section">
+    <div>Escape</div> 
+    <div> 
+        <span>into amazing experiences</span>
+    </div>
+</div>
+
+
+</body>
+</html>
