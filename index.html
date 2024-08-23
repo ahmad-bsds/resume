@@ -41,22 +41,20 @@
 
 
 
-	<section class="site-hero" id="section-home" style="position: sticky; top: 0; background-image: url(images/image_111.jpg)" data-stellar-background-ratio="0.5">
-
-		<div class="container">
-			<div class="row intro-text align-items-center justify-content-center">
-				<div class="col-md-10 text-center pt-5">
-
-					<h1 class="site-heading site-animate">Hello, I'm <strong class="d-block">MUHAMMAD AHMAD</strong></h1>
-					<strong class="d-block text-white text-uppercase letter-spacing">and this is my portfolio</strong>
-
-				</div>
-			</div>
-		</div>
-	</section> <!-- section -->
-
-
-
+<!-- Cover Page Section -->
+<section class="site-hero" id="section-home" style="position: sticky; top: 0; background-image: url(images/image_111.jpg); background-size: cover; background-attachment: fixed;" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row intro-text align-items-center justify-content-center">
+            <div class="col-md-10 text-center pt-5">
+                <h1 class="site-heading site-animate">
+                    <span class="text-split">Hello, I'm</span> <strong class="text-split d-block">MUHAMMAD AHMAD</strong>
+                </h1>
+                <strong class="d-block text-white text-uppercase letter-spacing text-split">and this is my portfolio</strong>
+            </div>
+        </div>
+    </div>
+</section>
+	
 	<section class="site-section" id="section-about-cards" style="position: sticky; top: 10vh; background: #101820; background-size: cover; height: 100vh; border-radius: 45px;">
 		<div class="container">
 			<div class="text-center pt-5 py-4" style="color: #BAC964;">
@@ -258,7 +256,7 @@ Fundamentally, every data point conceals a narrative awaiting discovery. As a Da
 <section class="site-section" id="section-portfolio" style="background: #222; position: sticky;" >
 		<div class="container">
 			<div class="row">
-				<div class="section-heading text-center col-md-12">
+				<div class="section-heading text-center col-md-12 site-heading">
 					<h2>Featured <strong>Portfolio</strong></h2>
 				</div>
 			</div>
@@ -503,5 +501,86 @@ Fundamentally, every data point conceals a narrative awaiting discovery. As a Da
     <script>
         gsap.from(".flex-col", { duration: 1, rotationX: 360, stagger: 0.1 });
     </script>
+
+	
+<script>
+  // Splitting text for individual letter animation
+  const splitText = (el) => {
+    const text = el.innerHTML;
+    el.innerHTML = text.split("").map(letter => `<span class="letter">${letter}</span>`).join("");
+  };
+
+  document.querySelectorAll('.text-split').forEach(splitText);
+
+  // GSAP Animation
+  gsap.from(".letter", {
+    opacity: 0,
+    y: 100,
+    duration: 2,
+    stagger: 0.05,
+    ease: "elastic.out(1, 0.5)",
+    delay: 0.3
+  });
+
+  gsap.to(".site-hero", {
+    backgroundColor: "#1a1a1a",
+    scrollTrigger: {
+      trigger: ".site-hero",
+      start: "top top",
+      end: "bottom center",
+      scrub: true,
+      onEnter: () => {
+        gsap.to(".site-hero", { backgroundColor: "#1a1a1a", duration: 1 });
+      },
+      onLeaveBack: () => {
+        gsap.to(".site-hero", { backgroundColor: "#111", duration: 1 });
+      }
+    }
+  });
+
+  // Hover Effect on text
+  gsap.utils.toArray(".letter").forEach(letter => {
+    letter.addEventListener("mouseenter", () => {
+      gsap.to(letter, { scale: 1.5, color: "#ff0000", duration: 0.5 });
+    });
+    letter.addEventListener("mouseleave", () => {
+      gsap.to(letter, { scale: 1, color: "#fff", duration: 0.5 });
+    });
+  });
+</script>
+
+<!-- GSAP Animation Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+<script>
+  // GSAP Animations
+  gsap.from(".site-heading", {
+    opacity: 0,
+    y: -50,
+    duration: 2,
+    ease: "power2.out",
+    delay: 0.5
+  });
+
+  gsap.from(".letter-spacing", {
+    opacity: 0,
+    y: 50,
+    duration: 2,
+    ease: "power2.out",
+    delay: 1
+  });
+
+  // Parallax Effect for the Background
+  gsap.to(".site-hero", {
+    backgroundPosition: "50% 100%", // Changes background position
+    scrollTrigger: {
+      trigger: ".site-hero",
+      start: "top top",
+      scrub: true
+    }
+  });
+</script>
     </body>
     </html>
