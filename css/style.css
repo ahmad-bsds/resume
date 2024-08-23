@@ -660,22 +660,3 @@ a {
 .card{
   border: none;
 }
-
-
-.clients-list{
-  display: flex;
-  flex-flow: row wrap;
-  border-color: black;
-  margin-top: 0;
-}
-
-
-.clients-list__item:nth-child(n) {
-    letter-spacing: 10vh;
-    
-}
-
-.clients-list__item{
-  margin-inline: 10vh;
-  margin-bottom: 10vh;
-}
