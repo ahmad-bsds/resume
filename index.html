@@ -16,6 +16,7 @@
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
+<!-- https://arik-template.framer.website/ -->
 
 
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
@@ -49,7 +50,7 @@
 
 
 <!-- Cover Page Section -->
-<section class="site-hero" id="section-home" style="position: sticky; top: 0; background-image: url(images/me.jpg); background-size: cover; background-attachment: fixed;" data-stellar-background-ratio="0.5">
+<section class="site-hero" id="section-home" style="position: sticky; top: 0; background-image: url(images/m.jpg); background-size: cover; background-attachment: fixed;" data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="row intro-text align-items-center justify-content-center">
             <div class="col-md-10 text-center pt-5">
@@ -61,25 +62,13 @@
         </div>
     </div>
 </section>
-	
-<!-- 	<section class="site-section" id="section-about-cards" style="position: sticky; top: 10vh; background: #0E0E0E; background-size: cover; height: 100vh; border-radius: 45px;">
-		<div class="container">
-			<div class="text-center pt-5 py-4" style="color: #BAC964;">
-				<strong class="d-block text-white text-uppercase letter-spacing">proud to be a</strong>
-				<h1 class="site-heading site-animate"><strong class="d-block" style="font-weight: 700;">Data Scientist</strong></h1>
-				<p>We are surrounded by data, but starved for insights -Jay Baer</p>
-
-			</div>
-		</div>
-
-	</section> -->
 
 
 	<section class="site-section" id="section-about" style="position: sticky; background: #0E0E0E;">
 		<div class="container">
 			<div class="row mb-5 align-items-center">
 				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-					<img src="images/me.jpg" alt="Image placeholder" class="img-fluid">
+					<img src="images/m.jpg" alt="Image placeholder" class="img-fluid">
 				</div>
 				<div class="col-lg-5 pl-lg-5" style="color: #DAC5A7;">
 					<div class="section-heading">
@@ -162,9 +151,10 @@ Fundamentally, every data point conceals a narrative awaiting discovery. As a Da
 </section>
 
 
-	<!-- ------------------ -->
 
-<section class="site-section" id="section-portfolio" style="background: #0E0E0E; position: sticky; color: #DAC5A7;" >
+
+
+ <section class="site-section" id="section-portfolio" style="background: #0E0E0E; position: sticky; color: #DAC5A7;" >
 		<div class="container">
 			<div class="row">
 				<div class="section-heading text-center col-md-12 site-heading">
@@ -184,91 +174,74 @@ Fundamentally, every data point conceals a narrative awaiting discovery. As a Da
 			<div class="filters-content">
 				<div class="row grid">
 
+				<div class="single-portfolio all powerbi col-lg-6">
+                    <div class="thumb">
+                        <img src="images/crime_analysis.png" alt="Los Angeles Crimes Analysis">
+                        <div class="overlay"></div>
+                        <a href="https://github.com/ahmad-bsds/CrimeAnalysis" class="middle">
+                            <div class="text">View Project</div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Los Angeles Crimes Analysis</h4>
+                        <div class="cat">Power BI</div>
+                    </div>
+                </div>
 
-					<!-- Power bi crime analysis -->
-					<div class="single-portfolio col-sm-4 all powerbi">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/crime_analysis.png" alt="">
-							</div>
-							<a href="https://github.com/ahmad-bsds/CrimeAnalysis" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div>
-						<div class="p-inner" style="color: #DAC5A7;">
-							<h4>Los Angles Crimes Analysis</h4>
-							<div class="cat">Power BI</div>
-						</div>
-					</div>
 
-					<!-- AI rate my professor -->
-					<div class="single-portfolio col-sm-4 all python">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/rate-prof.png" alt="">
-							</div>
-							<a href="./ai-professors.html" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div>
-						<div class="p-inner">
-							<h4>Professor Insights</h4>
-							<div class="cat">Python</div>
-						</div>
-					</div>
+                <div class="single-portfolio all python col-lg-6">
+                    <div class="thumb">
+                        <img src="images/rate-prof.png" alt="Professor Insights">
+                        <div class="overlay"></div>
+                        <a href="./ai-professors.html" class="middle">
+                            <div class="text">View Project</div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Professor Insights</h4>
+                        <div class="cat">Python</div>
+                    </div>
+                </div>
 
-					<!-- Renal sense -->
-					<div class="single-portfolio col-sm-4 all python">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/renal_sense.png" alt="">
-							</div>
-							<a href="./renal_sense.html" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div>
-						<div class="p-inner">
-							<h4>Renal Sense</h4>
-							<div class="cat">Python</div>
-						</div>
-					</div>
 
-					<!-- Excel marketing analytics -->
-					<div class="single-portfolio col-sm-4 all sheet">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/marketing-excel.png" alt="">
-							</div>
-							<a href="./marketing-excel.html" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                  
-						</div>
-						<div class="p-inner">
-							<h4>Marketing Analytics in MS Excel</h4>
-							<div class="cat">Spreadsheet</div>
-						</div>                                         
-					</div>      
+                <div class="single-portfolio all python col-lg-6">
+                    <div class="thumb">
+                        <img src="images/renal_sense.png" alt="Renal Sense">
+                        <div class="overlay"></div>
+                        <a href="./renal_sense.html" class="middle">
+                            <div class="text">View Project</div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Renal Sense</h4>
+                        <div class="cat">Python</div>
+                    </div>
+                </div>
 
+
+                <div class="single-portfolio all sheet col-lg-6">
+                    <div class="thumb">
+                        <img src="images/marketing-excel.png" alt="Marketing Analytics in MS Excel">
+                        <div class="overlay"></div>
+                        <a href="./marketing-excel.html" class="middle">
+                            <div class="text">View Project</div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Marketing Analytics in MS Excel</h4>
+                        <div class="cat">Spreadsheet</div>
+                    </div>
+                </div>
 
 				</div>
 			</div>
 		</div>
 	</section>
+
+
+
+
 	<!-- .section -->
-	
-<!-- ---------------------------- -->
 
 
 <!-- Section reserved for recommendation. -->
