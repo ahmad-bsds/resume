@@ -815,86 +815,51 @@ a {
 
 
 
-
-#section-values-passions {
-    background-color: #0E0E0E;
-    color: #DAC5A7;
-    padding: 100px 0;
-    overflow: hidden;
+#section-drives-passions {
+    padding: 5rem 0;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-heading {
+.section-values {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 60px;
     font-weight: 300;
     letter-spacing: 2px;
 }
+.content-box {
+    background-color: rgba(218, 197, 167, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
 
-.values-passions-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+.content-box:hover {
+    transform: translateY(-5px);
 }
 
 .subsection-heading {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.drive-item, .project-item {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #DAC5A7;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: rgba(218, 197, 167, 0.05);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-.drive-item:hover, .project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(218, 197, 167, 0.1);
+.subsection-heading svg {
+    margin-right: 0.5rem;
 }
 
-.icon-wrapper, .project-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(218, 197, 167, 0.1);
-    border-radius: 50%;
-    margin-right: 20px;
-    flex-shrink: 0;
-}
-
-.icon-wrapper svg, .project-icon svg {
+p {
+    font-size: 1rem;
+    line-height: 1.6;
     color: #DAC5A7;
 }
 
-.drive-item p, .project-details p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.project-details h4 {
-    font-size: 1.2rem;
-    margin: 0 0 10px 0;
-    font-weight: 600;
-}
-
 @media (max-width: 768px) {
-    .values-passions-grid {
-        grid-template-columns: 1fr;
+    .content-box {
+        margin-bottom: 2rem;
     }
 }
